@@ -9,5 +9,5 @@ import com.bharath.location.entities.Customer;
 //Ich mache aus meinem Crud meinen LocationService
 //Man kriegt Fahrradrahmenwerk und baut nur das Gehäuse
 
-public interface LocationRepository extends JpaRepository<Customer, Integer> {
+public interface CustomerRepository extends JpaRepository<Customer, Integer> {
 }
