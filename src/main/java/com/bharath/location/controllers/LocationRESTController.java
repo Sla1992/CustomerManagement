@@ -1,6 +1,6 @@
 package com.bharath.location.controllers;
 
-import com.bharath.location.entities.Location;
+import com.bharath.location.entities.Customer;
 import com.bharath.location.repos.LocationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,27 +16,27 @@ public class LocationRESTController {
     LocationRepository locationRepository;
 
     @GetMapping
-    public List<Location> getLocations(){ //getLocations oder getLocation?
+    public List<Customer> getLocations(){ //getLocations oder getLocation?
         return  locationRepository.findAll();
     }
 
     @PostMapping
-    public Location createLocation(@RequestBody Location location){
-        return locationRepository.save(location);
+    public Customer createLocation(@RequestBody Customer customer){
+        return locationRepository.save(customer);
     }
 
     @PutMapping
-    public Location updateLocation(@RequestBody Location location){
-        return locationRepository.save(location);
+    public Customer updateLocation(@RequestBody Customer customer){
+        return locationRepository.save(customer);
     }
 
     @DeleteMapping
-    public void deleteLocation(@RequestBody Location location){
-        locationRepository.delete(location);
+    public void deleteLocation(@RequestBody Customer customer){
+        locationRepository.delete(customer);
     }
 
     @GetMapping("/{id}")
-    public Optional<Location> getLocation(@PathVariable("id") int id){
+    public Optional<Customer> getLocation(@PathVariable("id") int id){
         return locationRepository.findById(id);
     }
 }

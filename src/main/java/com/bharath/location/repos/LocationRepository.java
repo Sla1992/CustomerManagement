@@ -1,7 +1,7 @@
 package com.bharath.location.repos;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.bharath.location.entities.Location;
+import com.bharath.location.entities.Customer;
 
 //CRUD Funktionen
 //Warum Fahrrad erst bauen wenn es da steht?
@@ -9,5 +9,5 @@ import com.bharath.location.entities.Location;
 //Ich mache aus meinem Crud meinen LocationService
 //Man kriegt Fahrradrahmenwerk und baut nur das Gehäuse
 
-public interface LocationRepository extends JpaRepository<Location, Integer> {
+public interface LocationRepository extends JpaRepository<Customer, Integer> {
 }

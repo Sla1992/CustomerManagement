@@ -1,6 +1,6 @@
 package com.bharath.location.service;
 
-import com.bharath.location.entities.Location;
+import com.bharath.location.entities.Customer;
 import com.bharath.location.repos.LocationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,27 +14,27 @@ public class LocationServiceImpl implements LocationService{
     private LocationRepository repository;
 
     @Override
-    public Location saveLocation(Location location) {
-        return repository.save(location);
+    public Customer saveLocation(Customer customer) {
+        return repository.save(customer);
     }
 
     @Override
-    public Location updateLocation(Location location) {
-        return repository.save(location);
+    public Customer updateLocation(Customer customer) {
+        return repository.save(customer);
     }
 
     @Override
-    public void deleteLocation(Location location) {
-        repository.delete(location);
+    public void deleteLocation(Customer customer) {
+        repository.delete(customer);
     }
 
     @Override
-    public Location getLocationById(int id) {
+    public Customer getLocationById(int id) {
         return repository.getOne(id);
     }
 
     @Override
-    public List<Location> getAllLocations() {
+    public List<Customer> getAllLocations() {
         return repository.findAll();
     }
 

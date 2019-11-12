@@ -5,17 +5,26 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Create Location</title>
+    <title>Create Customer</title>
 </head>
 <body>
 
 <form action="updateLoc" method="POST">
     <pre>
-        Id: <input type="text" name="id" value="${location.id}" readonly="true"/>
-        Code: <input type="text" name="code" value="${location.code}"/>
-        Name: <input type="text" name="name" value="${location.name}"/>
-        Type: Urban <input type="radio" name="type" value="URBAN" ${location.type=='URBAN'?'checked':''}/>
-        Rural <input type="radio" name="type" value="RURAL" ${location.type=='RURAL'?'checked':''}/>
+        Id: <input type="text" name="id" value="${customer.id}" readonly="true"/>
+        Salutation: <input type="text" name="salutation" value="${customer.salutation}"/>
+        Firstname: <input type="text" name="firstname" value="${customer.firstname}"/>
+        Lastname: <input type="text" name="lastname" value="${customer.lastname}"/>
+        Country: <input type="text" name="Country" value="${customer.country}"/>
+        City: <input type="text" name="City" value="${customer.city}"/>
+        Streetname: <input type="text" name="streetname" value="${customer.streetname}"/>
+        Streetnumber: <input type="text" name="streetnumber" value="${customer.streetnumber}"/>
+        Postalcode: <input type="text" name="postalcode" value="${customer.postalcode}"/>
+        Contact: <input type="text" name="contact" value="${customer.contact}"/>
+
+
+
+
         <input type="submit" value="save" />
     </pre>
 </form>

@@ -10,25 +10,40 @@
 </head>
 <body>
 
-<h2>Locations</h2>
+<h2>Customers</h2>
 <table>
     <tr>
         <th>id</th>
-        <th>code</th>
-        <th>name</th>
-        <th>type</th>
+        <th>salutation</th>
+        <th>firstname</th>
+        <th>lastname</th>
+        <th>email</th>
+        <th>country</th>
+        <th>city</th>
+        <th>streetname</th>
+        <th>streetnumber</th>
+        <th>postalcode</th>
+        <th>contact</th>
     </tr>
-    <c:forEach items="${locations}" var="location">
+    <c:forEach items="${customers}" var="customer">
         <tr>
-            <td>${location.id}</td>
-            <td>${location.code}</td>
-            <td>${location.name}</td>
-            <td>${location.type}</td>
-            <td><a href="showUpdate?id=${location.id}">update</a></td>
-            <td><a href="deleteLocations?id=${location.id}">delete</a></td>
+            <td>${customer.id}</td>
+            <td>${customer.salutation}</td>
+            <td>${customer.firstname}</td>
+            <td>${customer.lastname}</td>
+            <td>${customer.email}</td>
+            <td>${customer.country}</td>
+            <td>${customer.city}</td>
+            <td>${customer.streetname}</td>
+            <td>${customer.streetnumber}</td>
+            <td>${customer.postalcode}</td>
+            <td>${customer.contact}</td>
+
+            <td><a href="showUpdate?id=${customer.id}">update</a></td>
+            <td><a href="deleteLocations?id=${customer.id}">delete</a></td>
         </tr>
     </c:forEach>
 </table>
-<a href="showCreate">Add Location</a>
+<a href="showCreate">Add Customer</a>
 </body>
 </html>
