@@ -1,21 +1,23 @@
 package com.bharath.location.entities;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
 
 @Entity
 public class Country {
 
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int idcountry;
     private String country;
-    private Date last_update;
 
-    public int getId() {
-        return id;
-    }
+    public int getIdCountry() { return idcountry; }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdCountry(int idcountry) {
+        this.idcountry = idcountry;
     }
 
     public String getCountry() {
@@ -26,20 +28,11 @@ public class Country {
         this.country = country;
     }
 
-    public Date getLast_update() {
-        return last_update;
-    }
-
-    public void setLast_update(Date last_update) {
-        this.last_update = last_update;
-    }
-
     @Override
     public String toString() {
-        return "customer{" +
-                "id=" + id +
+        return "country{" +
+                "id=" + idcountry +
                 ", country='" + country + '\'' +
-                ", last_update='" + last_update + '\'' +
                 '}';
     }
 }

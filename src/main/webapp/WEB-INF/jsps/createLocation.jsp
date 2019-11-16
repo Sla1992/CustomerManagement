@@ -9,19 +9,9 @@
 
 <form action="saveLoc" method="POST">
     <pre>
-        Id: <input type="text" name="id"/>
-        Salutation: <input type="text" name="salutation"/>
-        Firstname: <input type="text" name="firstname"/>
-        Lastname: <input type="text" name="lastname"/>
-        Email: <input type="text" name="email"/>
         Country: <input type="text" name="country"/>
-        City: <input type="text" name="city"/>
-        Streetname: <input type="text" name="streetname"/>
-        Streetnumber: <input type="text" name="streetnumber"/>
-        Postalcode: <input type="text" name="postalcode"/>
-        Contact: <input type="text" name="contact"/>
         <input type="submit" value="save" />
-        <input type="submit" value="clear" />
+
     </pre>
 </form>
 ${msg}

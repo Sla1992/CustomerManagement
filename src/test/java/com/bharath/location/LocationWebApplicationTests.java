@@ -1,9 +1,9 @@
 package com.bharath.location;
 
-        import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+
+//@SpringBootTest
 class LocationWebApplicationTests {
-
 
 }

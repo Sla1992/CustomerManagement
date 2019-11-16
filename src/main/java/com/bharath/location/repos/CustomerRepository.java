@@ -10,4 +10,5 @@ import com.bharath.location.entities.Customer;
 //Man kriegt Fahrradrahmenwerk und baut nur das Gehäuse
 
 public interface CustomerRepository extends JpaRepository<Customer, Integer> {
+    Customer create(Customer customer);
 }

@@ -14,13 +14,11 @@
 <table>
     <tr>
         <th>id</th>
-        <th>salutation</th>
         <th>firstname</th>
         <th>lastname</th>
-        <th>email</th>
         <th>country</th>
         <th>city</th>
-        <th>streetname</th>
+        <th>street</th>
         <th>streetnumber</th>
         <th>postalcode</th>
         <th>contact</th>
@@ -28,13 +26,11 @@
     <c:forEach items="${customers}" var="customer">
         <tr>
             <td>${customer.id}</td>
-            <td>${customer.salutation}</td>
             <td>${customer.firstname}</td>
             <td>${customer.lastname}</td>
-            <td>${customer.email}</td>
             <td>${customer.country}</td>
             <td>${customer.city}</td>
-            <td>${customer.streetname}</td>
+            <td>${customer.street}</td>
             <td>${customer.streetnumber}</td>
             <td>${customer.postalcode}</td>
             <td>${customer.contact}</td>

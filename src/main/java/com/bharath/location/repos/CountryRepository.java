@@ -1,4 +1,7 @@
 package com.bharath.location.repos;
 
-public interface CountryRepository {
+import com.bharath.location.entities.Country;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CountryRepository extends JpaRepository<Country, Integer> {
 }

@@ -62,8 +62,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
+            <groupId>org.jboss.arquillian.test</groupId>
+            <artifactId>arquillian-test-api</artifactId>
+            <version>1.4.1.Final</version>
         </dependency>
 
     </dependencies>

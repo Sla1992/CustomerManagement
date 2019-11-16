@@ -1,7 +1,7 @@
 package com.bharath.location.controllers;
 
-import com.bharath.location.entities.Customer;
-import com.bharath.location.service.LocationService;
+import com.bharath.location.entities.*;
+import com.bharath.location.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -15,7 +15,7 @@ import java.util.List;
 public class LocationController {
 
     @Autowired
-    LocationService service;
+    CustomerService service;
 
     @RequestMapping("/showCreate")
     public String showCreate() {
@@ -23,16 +23,18 @@ public class LocationController {
     }
 
     @RequestMapping("/saveLoc")
-    public String saveLocation(@ModelAttribute("location") Customer customer, ModelMap modelMap){
-        Customer customerSaved = service.saveLocation(customer);
-        String msg = "Location saved with id :" + customerSaved.getId();
+    public String saveLocation(@ModelAttribute("country") Country country, ModelMap modelMap) {
+
+        Country countrySaved = service.saveCountry(country);
+
+        String msg = "Customer saved with id :" + countrySaved.getIdCountry();
         modelMap.addAttribute("msg", msg);
         return "createLocation";
     }
 
     @RequestMapping("/displayLocations")
     public String displayLocations(ModelMap modelMap){
-        List<Customer> customers = service.getAllLocations();
+        List<Customer> customers = service.getAllCustomers();
         modelMap.addAttribute("locations", customers);
         return "displayLocations";
     }
@@ -40,24 +42,24 @@ public class LocationController {
     @RequestMapping("deleteLocations")
     public String deleteLocation(@RequestParam("id") int id,ModelMap modelMap){
         Customer customer = new Customer();
-        customer.setId(id);
-        service.deleteLocation(customer);
-        List<Customer> customers = service.getAllLocations();
+        customer.setIdCustomer(id);
+        service.deleteCustomer(customer);
+        List<Customer> customers = service.getAllCustomers();
         modelMap.addAttribute("locations", customers);
         return "displayLocations";
     }
 
     @RequestMapping("/showUpdate")
     public String showUpdate(@RequestParam("id") int id, ModelMap modelMap){
-        Customer customer = service.getLocationById(id);
+        Customer customer = service.getCustomerById(id);
         modelMap.addAttribute("location", customer);
         return "updateLocations";
     }
 
     @RequestMapping("/updateLoc")
     public String updateLocation(@ModelAttribute("location") Customer customer, ModelMap modelMap){
-        service.updateLocation(customer);
-        List<Customer> customers = service.getAllLocations();
+        service.updateCustomer(customer);
+        List<Customer> customers = service.getAllCustomers();
         modelMap.addAttribute("locations", customers);
         return "displayLocations";
     }
